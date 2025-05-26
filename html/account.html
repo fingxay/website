@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web mỹ phẩm</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/account.css">
+    <link rel="stylesheet" href="../styles/address.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/search.css">
+  </head>
+
+  <body>
+    
+    <div class="cosmetics_header">
+
+
+    </div>
+
+    <div class="seacon_search_bar_container">
+      <input class="seacon_search_bar js_seacon_search_bar" placeholder="Tìm kiếm" type="text">
+      <a href="search.html"><button class="seacon_search_button js_seacon_search_button">Search</button></a>
+    </div>
+
+    <div class="account_container">
+      <div class="left_account">
+        <div class="top_left_account">
+          <img src="../image/icons/businessman.svg">
+          <p><span id="username">admin</span></p>
+        </div>
+
+        <div class="bottom_left_account">
+          <div class="profile_button">
+            <i class="fa-solid fa-user"></i>
+            Hồ sơ
+          </div>
+          <div class="address_button">
+            <i class="fa-solid fa-location-dot"></i>
+            Địa chỉ
+          </div>
+          <div class="setting_button">
+            <i class="fa-solid fa-gear"></i>
+            Những thiết lập riêng tư
+          </div>
+          <div class="logout_button">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Đăng xuất
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="right_account">
+        <div class="top_right_account">
+          Hồ sơ
+        </div>
+
+        <div class="bottom_right_account_profile">
+          <div class="left_bottom_right_account_profile">
+            <div>
+              Tên đăng nhập:
+            </div>
+            <div>
+              Email:
+            </div>
+            <div>
+              Số điện thoại:
+            </div>
+            <div>
+              Ngày sinh:
+            </div>
+            <div>
+              Giới tính:
+            </div>
+          </div>
+          <div class="right_bottom_right_account_profile">
+            <div>
+              <input type="text" placeholder="Tên đăng nhập">
+            </div>
+            <div>
+              <input type="text" placeholder="Email">
+            </div>
+            <div>
+              <input type="text" placeholder="Số điện thoại">
+            </div>
+            <div>
+              <input type="date" placeholder="Ngày sinh">
+            </div>
+            <div class="right_bottom_right_account_profile_radio">
+              <input type="radio" name="gender" value="male" id="male"> <label for="male">Nam</label>
+              <input type="radio" name="gender" value="female" id="female"> <label for="female">Nữ</label>
+              <input type="radio" name="gender" value="other" id="other"> <label for="other">Khác</label>
+            </div>
+            <button>Lưu thay đổi</button>
+          </div>
+        </div>
+
+        <div class="bottom_right_account_address">
+          <div class="account_address_title">
+            Địa chỉ
+            <button>+ Thêm địa chỉ mới</button>
+          </div>
+
+          <div class="account_address_container">
+            <div class="account_address">
+              <div>
+                đường nguyễn thị thử
+              </div>
+    
+              <div class="account_address_address">
+                Xã Xuân Thới Sơn, Huyện Hóc Môn, TP. Hồ Chí Minh
+                <div class="account_address_button">
+                  <span  class="js_update_button">Cập nhật</span>
+                  <span>Xóa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="modal_overlay js_modal_overlay"></div>
+
+        <div class="add_address_modal js_add_address_modal">
+          <div class="modal_header">
+            <p>Địa chỉ mới</p>
+            <span class="close_modal js_close_modal">&times;</span>
+          </div>
+          <div class="modal_content">
+              <div class="modal_address_selection_group">
+                  <div class="modal_address_dropdown">
+                      <input type="text" id="province_search_input" placeholder="Tỉnh/Thành phố, Quận/Huyện, Phường/Xã" readonly>
+                      <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                      <div class="address_dropdown_arrow">&#9660;</div>
+                  </div>
+                  <div class="address_selection_tabs js_address_selection_tabs">
+                      <div class="tab_button active js_tab_province" data-type="province">Tỉnh/Thành phố</div>
+                      <div class="tab_button js_tab_district" data-type="district">Quận/Huyện</div>
+                      <div class="tab_button js_tab_ward" data-type="ward">Phường/Xã</div>
+                  </div>
+                  <div class="address_selection_list js_address_selection_list">
+                      </div>
+              </div>
+
+              <input type="text" placeholder="Địa chỉ cụ thể" class="modal_specific_address_input js_specific_address_input">
+
+              <div class="modal_actions">
+                <button class="modal_back_button js_modal_back_button">Trở Lại</button>
+                <button class="modal_complete_button js_modal_complete_button">Hoàn thành</button>
+              </div>
+          </div>
+        </div>
+
+        
+        <div class="update_address_modal js_update_address_modal">
+          <div class="modal_header">
+            <p>Cập nhật địa chỉ</p>
+            <span class="close_modal js_update_close_modal">&times;</span>
+          </div>
+          <div class="modal_content">
+              <div class="modal_address_selection_group">
+                  <div class="modal_address_dropdown">
+                      <input type="text" id="province_update_search_input" placeholder="Tỉnh/Thành phố, Quận/Huyện, Phường/Xã" readonly>
+                      <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                      <div class="address_dropdown_arrow">&#9660;</div>
+                  </div>
+                  <div class="address_selection_tabs js_update_address_selection_tabs">
+                      <div class="tab_button active js_update_tab_province" data-type="province">Tỉnh/Thành phố</div>
+                      <div class="tab_button js_update_tab_district" data-type="district">Quận/Huyện</div>
+                      <div class="tab_button js_update_tab_ward" data-type="ward">Phường/Xã</div>
+                  </div>
+                  <div class="address_selection_list js_update_address_selection_list">
+                      </div>
+              </div>
+
+              <input type="text" placeholder="Địa chỉ cụ thể" class="modal_specific_address_input js_specific_address_input">
+
+              <div class="modal_actions">
+                <button class="modal_back_button js_modal_update_back_button">Trở Lại</button>
+                <button class="modal_update_button js_modal_update_button">Hoàn thành</button>
+              </div>
+          </div>
+        </div>
+
+
+
+        <div class="bottom_right_account_settings">
+          <div>Yêu cầu xóa tài khoản</div>
+          <button>Xóa tài khoản</button>
+        </div>
+      </div>
+    </div>
+      
+    
+
+    <div class="footer">
+      <div class="footer_left">
+        <a href="cosmetics.html" class="icon_header"><img class="image_logo" src="../image/logo_footer.webp"></a>
+        <p class="introduce">Shop mỹ phẩm Cool Beauty
+          Làm đẹp trở nên dễ dàng hơn</p>
+        <p>Hotline: 1900 6750</p>
+        <p>Email: coolteam@gmail.com</p>
+      </div>
+
+      <div class="footer_middle">
+        <p class="connection">Kết nối với chúng tôi</p>
+        <i class="fab fa-facebook icon_connection"></i>
+        <i class="fab fa-twitter icon_connection"></i>
+        <i class="fab fa-google icon_connection"></i>
+        <i class="fab fa-instagram icon_connection icon_instagram"></i>
+        <i class="fab fa-youtube icon_connection icon_youtube"></i>
+      </div>
+
+      <div class="footer_right">
+        <p class="payment">Phương thức thanh toán</p>
+        <img class="payment_icon" src="../image/icons/i_payment.webp">
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/share/header.js" defer></script>
+    <script type="module" src="../scripts/account.js" defer></script>
+    <script type="module" src="../scripts/address.js" defer></script>
+  </body>
+</html>

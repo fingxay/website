@@ -1,0 +1,142 @@
+.cosmetics_products{
+  margin-top: 20px;
+  display: grid;
+  margin-left: 8%;
+  margin-right: 8%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.product{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #d45d7a;
+  margin: 10px;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.product:hover{
+  box-shadow: 0px 0px 10px #d45d7a;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+.image{
+  width: 100%;
+}
+
+.name_product{
+  height: 22px;
+  font-family: arial;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.name_product:hover{
+  color: #d45d7a;
+  transition: all 0.2s ease-in-out;
+}
+
+.price_product{
+  font-family: arial;
+  padding-left: 5px;
+  padding-top: 15px;
+  font-size: 20px;
+  color: #d45d7a;
+  font-weight: bold;
+}
+
+.button_product{
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.button_addToCart{
+  background-color: palevioletred;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #d45d7a;
+  color: white;
+  font-family: arial;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+.button_addToCart:hover{
+  background-color: white;
+  color: #d45d7a;
+  border: #d45d7a 1px solid;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+}
+
+.button_addToCart:active{
+  color: white;
+  background-color: #d45d7ba6;
+  border: #d45d7ba6 1px solid;
+  transition: all 0.1s ease-in-out;
+}
+
+.main_name_product {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hr_main_name_right {
+  flex-grow: 1; /* Cho phép đường kẻ này chiếm không gian còn lại */
+  border-top: 1px solid #d45d7a;
+  margin-right: 15px;
+  margin-left: 8.6%;
+}
+
+.main_name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 15px;
+}
+
+.hr_main_name_left {
+  flex-grow: 1; /* Cho phép đường kẻ này chiếm không gian còn lại */
+  border-top: 1px solid #d45d7a;
+  margin-left: 15px;
+  margin-right: 8.6%;
+}
+
+@media screen and (max-width: 1180px) {
+  .cosmetics_products{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 944px) {
+  .cosmetics_products{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 712px) {
+  .cosmetics_products{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 944px) {
+  .hr_main_name_left {
+    margin-right: 9%;
+  }
+  .hr_main_name_right {
+    margin-left: 9%;
+  }
+}
+
+@media screen and (max-width: 712px) {
+  .hr_main_name_left {
+    display: none;
+  }
+  .hr_main_name_right {
+    display: none;
+  }
+}

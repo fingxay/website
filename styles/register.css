@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.register-container {
+  margin-top: 160px;
+  margin-bottom: 140px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.register-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+.register-container input[type="text"],
+.register-container input[id="email"],
+.register-container input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.register-container button {
+  background-color: #d45d7a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.register-container button:hover {
+  background-color: #d45d7ba3;
+}
+.register-container button:active{
+  background-color: #d45d7b76;
+}
+.register-container .login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.register-container .login-link a {
+  color: #eabc3f;
+  text-decoration: none;
+}
+.register-container .login-link a:hover {
+  text-decoration: underline;
+}
+
+.register-error{
+  color: red;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.register-success{
+  color: rgb(18, 190, 18);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  display: none;
+}
+
+.register-login-button{
+  background-color: #d45d7a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+

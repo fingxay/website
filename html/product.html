@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web mỹ phẩm</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    
+    <div class="cosmetics_header">
+
+      
+    </div>
+
+    <div class="seacon_search_bar_container">
+      <input class="seacon_search_bar js_seacon_search_bar" placeholder="Tìm kiếm" type="text">
+      <a href="search.html"><button class="seacon_search_button js_seacon_search_button">Search</button></a>
+    </div>
+
+    <div class="main_of_product">
+      <div class="product_container">
+        <div class="product js_product">
+  
+          <div class="left_product">
+            <div class="div_img_product">
+              <img class="img_product" src="../image/products/Dầu dưỡng da Phytoceuticals Argan.webp">
+            </div>
+          </div>
+            
+          <div class="right_product">
+            <div class="product_name">Dầu dưỡng da Phytoceuticals Argan</div>
+            <div class="product_price">Giá: 1.200.000 VNĐ</div>
+            <div onclick="document.getElementById('chi-tiet').scrollIntoView({ behavior: 'smooth' });" class="product_description">Thông tin sản phẩm</div>
+  
+            <div class="div_quantity">
+              <div class="quantity_name">Số lượng: </div>
+              <div class="quantity_control">
+                <button class="minus_button js_minus_button" data-product-id="${matchingProduct.id}">-</button>
+                <input class="quantity js_quantity js_quantity-${matchingProduct.id}" value="0" data-product-id="${matchingProduct.id}"></input>
+                <button class="plus_button js_plus_button" data-product-id="${matchingProduct.id}">+</button>
+              </div> 
+            </div>
+            
+            <button class="bt_add_to_cart js_bt_add_to_cart">Thêm vào giỏ hàng</button>
+          </div>
+          
+        </div>
+  
+        <div class="product_detail js_product_detail" id="chi-tiet">
+          <div class="product_detail_title">Chi tiết sản phẩm</div>
+          <div class="product_detail_content">
+            Kiara Phytoceuticals là thương hiệu chuyên về các sản phẩm dạng dầu chăm sóc da của Úc, thương hiệu này cũng gắn liền với nhiều loại dầu được yêu thích như Macadamia oil, camelia oil, maracuja oil,… được sản xuất từ thiên nhiên, đảm bảo chất lượng, độ tinh khiết, độ tươi mới an toàn cho người dùng. Về dầu Argan, thì đây là loại dầu dưỡng da đắt đỏ bậc nhất thế giới và được ví như “vàng lỏng” trong giới skincare với nhiều tính năng đặc trưng như của em Kiara Phytoceuticals Argan Oil này:<br><br>
+
+            Giàu vitamin E, acid béo hàm lượng cao giúp làm ẩm và dịu da hiệu quả.<br>
+            Chống lão hóa, cải thiện nếp nhăn, phục hồi độ đàn hồi và tăng sinh collagen
+            Cân bằng da bằng cách cung cấp độ ẩm tự nhiên, chữa lành các tế bào hư, giảm viêm
+            Giảm thâm mụn, sẹo và ngăn ngừa mụn mới<br>
+            Ngoài ra, em này còn có công dụng rất tốt trong việc phục hồi tóc bóng khỏe; nuôi dưỡng móng không bị khô, giòn, dễ gãy; chữa ẩm cho môi khô nứt nẻ.<br>
+            Sử dụng dầu Argan trước khi makeup hay trộn vào kem nền sẽ giúp lớp nền được bóng khỏe, da mịn màng và kiềm dầu được tốt hơn.
+            Sản phẩm được giới thiệu hoàn toàn lành tính, có thể sử dụng được cho trẻ em và phụ nữ có thai .<br>
+            Không chứa hóa chất, không chất bảo quản, không hương liệu, phù hợp với mọi loại da.<br>
+            Nên bảo quản sản phẩm trong môi trường mát mẻ, dưới 25 độ C, và tránh ánh nắng.<br>
+          </div>
+  
+        </div>
+  
+        <div class="related_products">
+          <div class="related_products_title">
+            <div class="related_products_title_left"></div>
+            <div class="related_products_title_name">
+              Sản phẩm liên quan
+            </div>
+            <div class="related_products_title_right"></div>
+          </div>
+          <div class="related_products_list js_related_products_list">
+            
+            <div class="product_related js_product" data-product-id="${product.id}">
+              <div class="image_product">
+                <img class="image" src="../image/products/Dầu dưỡng da Phytoceuticals Argan.webp">
+              </div>
+              <div class="name_product">
+                Dầu dưỡng da Phytoceuticals Argan
+              </div>
+              <div class="price_product">
+                169000
+              </div>
+              <div class="button_product">
+                <button class="button_addToCart js_button_addToCart" data-product-id="${product.id}">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+
+            <div class="product_related js_product" data-product-id="${product.id}">
+              <div class="image_product">
+                <img class="image" src="../image/products/Dầu dưỡng da Phytoceuticals Argan.webp">
+              </div>
+              <div class="name_product">
+                Dầu dưỡng da Phytoceuticals Argan
+              </div>
+              <div class="price_product">
+                169000
+              </div>
+              <div class="button_product">
+                <button class="button_addToCart js_button_addToCart" data-product-id="${product.id}">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+
+            <div class="product_related js_product" data-product-id="${product.id}">
+              <div class="image_product">
+                <img class="image" src="../image/products/Dầu dưỡng da Phytoceuticals Argan.webp">
+              </div>
+              <div class="name_product">
+                Dầu dưỡng da Phytoceuticals Argan
+              </div>
+              <div class="price_product">
+                169000
+              </div>
+              <div class="button_product">
+                <button class="button_addToCart js_button_addToCart" data-product-id="${product.id}">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+
+            <div class="product_related js_product" data-product-id="${product.id}">
+              <div class="image_product">
+                <img class="image" src="../image/products/Dầu dưỡng da Phytoceuticals Argan.webp">
+              </div>
+              <div class="name_product">
+                Dầu dưỡng da Phytoceuticals Argan
+              </div>
+              <div class="price_product">
+                169000
+              </div>
+              <div class="button_product">
+                <button class="button_addToCart js_button_addToCart" data-product-id="${product.id}">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <div class="footer">
+      <div class="footer_left">
+        <a href="cosmetics.html" class="icon_header"><img class="image_logo" src="../image/logo_footer.webp"></a>
+        <p class="introduce">Shop mỹ phẩm Cool Beauty
+          Làm đẹp trở nên dễ dàng hơn</p>
+        <p>Hotline: 1900 6750</p>
+        <p>Email: coolteam@gmail.com</p>
+      </div>
+
+      <div class="footer_middle">
+        <p class="connection">Kết nối với chúng tôi</p>
+        <i class="fab fa-facebook icon_connection"></i>
+        <i class="fab fa-twitter icon_connection"></i>
+        <i class="fab fa-google icon_connection"></i>
+        <i class="fab fa-instagram icon_connection icon_instagram"></i>
+        <i class="fab fa-youtube icon_connection icon_youtube"></i>
+      </div>
+
+      <div class="footer_right">
+        <p class="payment">Phương thức thanh toán</p>
+        <img class="payment_icon" src="../image/icons/i_payment.webp">
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/product.js" defer></script>
+    <script type="module" src="../scripts/share/header.js" defer></script>
+  </body>
+</html>

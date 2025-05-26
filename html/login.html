@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web mỹ phẩm</title>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/search.css">
+  </head>
+
+  <body>
+    
+    <div class="cosmetics_header">
+
+
+    </div>
+
+    <div class="seacon_search_bar_container">
+      <input class="seacon_search_bar js_seacon_search_bar" placeholder="Tìm kiếm" type="text">
+      <a href="search.html"><button class="seacon_search_button js_seacon_search_button">Search</button></a>
+    </div>
+
+    <div class="login-container">
+      <h2>Đăng Nhập</h2>
+      <form id="login-form"> <label for="username_login">Tên người dùng hoặc Email:</label>
+          <input type="text" id="username_login" name="username_login" required>
+
+          <label for="password_login">Mật khẩu:</label>
+          <input type="password" id="password_login" name="password_login" required>
+
+          <div class="login-error"></div>
+
+          <button type="submit">Đăng Nhập</button>
+
+          <div class="register-link">
+              Bạn chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
+          </div>
+      </form>
+    </div>
+      
+    
+
+    <div class="footer">
+      <div class="footer_left">
+        <a href="cosmetics.html" class="icon_header"><img class="image_logo" src="../image/logo_footer.webp"></a>
+        <p class="introduce">Shop mỹ phẩm Cool Beauty
+          Làm đẹp trở nên dễ dàng hơn</p>
+        <p>Hotline: 1900 6750</p>
+        <p>Email: coolteam@gmail.com</p>
+      </div>
+
+      <div class="footer_middle">
+        <p class="connection">Kết nối với chúng tôi</p>
+        <i class="fab fa-facebook icon_connection"></i>
+        <i class="fab fa-twitter icon_connection"></i>
+        <i class="fab fa-google icon_connection"></i>
+        <i class="fab fa-instagram icon_connection icon_instagram"></i>
+        <i class="fab fa-youtube icon_connection icon_youtube"></i>
+      </div>
+
+      <div class="footer_right">
+        <p class="payment">Phương thức thanh toán</p>
+        <img class="payment_icon" src="../image/icons/i_payment.webp">
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/share/header.js" defer></script>
+    <script type="module" src="../scripts/login.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+.bottom_right_account_address{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  display: none;
+}
+
+.account_address_container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.account_address{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #ebe7e76a;
+}
+
+.account_address_address{
+  display: flex;
+  justify-content: space-between;
+}
+
+.account_address_button{
+  display: flex;
+  gap: 10px;
+}
+
+.account_address_button span{
+  cursor: pointer;
+  color: rgb(38, 5, 122);
+}
+
+.account_address_button span:hover{
+  color: #d45d7a;
+}
+
+.account_address_title{
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.account_address_title button{
+  padding: 7px 17px;
+  border-radius: 20px;
+  border: 1px solid #d45d7a;
+  background-color: #d45d7a;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.account_address_title button:hover{
+  background-color: #fff;
+  color: #d45d7a;
+}
+
+.account_address_title button:active{
+  background-color: #d45d7bb0;
+  color: #fff;
+}
+
+
+
+/* Modal địa chỉ mới */
+/* Modal Overlay */
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Mặc định ẩn */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add Address Modal */
+.add_address_modal, .update_address_modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 600px; /* Điều chỉnh kích thước modal */
+    max-width: 90%;
+    z-index: 1001;
+    display: none; /* Mặc định ẩn */
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+.modal_header .close_modal {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.modal_header .close_modal:hover {
+    background-color: #f0f0f0;
+}
+
+.modal_content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+}
+
+.modal_specific_address_input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+/* Address Selection Group */
+.modal_address_selection_group {
+    position: relative;
+}
+
+.modal_address_dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.modal_address_dropdown input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* Thêm padding cho icon và mũi tên */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.modal_address_dropdown .search_icon {
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.modal_address_dropdown .address_dropdown_arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none; /* Để có thể click qua mũi tên vào input */
+}
+
+.address_selection_tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-top: 10px; /* Khoảng cách với input search */
+    display: none; /* Mặc định ẩn, chỉ hiện khi dropdown mở */
+}
+
+.tab_button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    color: #555;
+    font-size: 14px;
+    flex: 1; /* Để các tab chia đều không gian */
+    text-align: center;
+}
+
+.tab_button.active {
+    border-color: #d45d7a;
+    color: #d45d7a;
+    font-weight: bold;
+}
+
+.address_selection_list {
+    border: 1px solid #eee;
+    border-top: none;
+    max-height: 200px; /* Giới hạn chiều cao và thêm thanh cuộn */
+    overflow-y: auto;
+    background-color: #fff;
+    display: none; /* Mặc định ẩn, chỉ hiện khi dropdown mở */
+}
+
+.address_selection_list div {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.address_selection_list div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Đã loại bỏ .modal_map_placeholder */
+
+.modal_actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.modal_back_button,
+.modal_complete_button,
+.modal_update_button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal_back_button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.modal_back_button:hover {
+    background-color: #e0e0e0;
+}
+
+.modal_complete_button,
+.modal_update_button {
+    background-color: #d45d7a;
+    color: #fff;
+    border: none;
+}
+
+.modal_complete_button:hover {
+    opacity: 0.9;
+}
+.modal_update_button:hover {
+    opacity: 0.9;
+}
+
+
+/* Modal cập nhật địa chỉ */

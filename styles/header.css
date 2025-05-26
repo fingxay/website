@@ -1,0 +1,120 @@
+.cosmetics_header{
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0; 
+  right: 0;
+  z-index: 100;
+  background-color: rgb(255, 243, 243);
+}
+
+.left_header{/*trái header*/
+  padding-top: 13px;
+}
+
+.logo_header{
+  margin-left: 30px;
+}
+.image_logo{
+  width: 200px;
+  cursor: pointer;
+}
+
+.middle_header{ /*giữa header*/
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  padding-right: 5px;
+}
+
+.search_bar{
+  height: 30px;
+  flex: 1;
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-family: arial;
+  border: 1px solid rgb(255, 152, 151);
+  outline: none;
+  padding-left: 10px;
+}
+
+.search_button{
+  height: 33.5px;
+  padding-right: 8px;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+  color: white;
+  background-color: rgb(255, 152, 151);
+  font-family: arial;
+  transition: all 0.2s ease-in-out;
+}
+
+.search_button:hover{
+  background-color: white;
+  border-top: 1px solid rgb(255, 152, 151);
+  border-right: 1px solid rgb(255, 152, 151);
+  border-bottom: 1px solid rgb(255, 152, 151);
+  color: rgb(255, 152, 151);
+  transition: all 0.1s ease-in-out;
+}
+.search_button:active{
+  background-color: rgba(255, 153, 151, 0.504);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.right_header{/*phải header*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.icon_cart{
+  height: 40px;
+  cursor: pointer;
+  padding-right: 30px;
+}
+
+.icon_profile{
+  height: 40px;
+  cursor: pointer;
+}
+
+.cart_quantity{
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 13px;
+  right: 43px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+.cart_quantity:hover{
+  color: rgb(255, 121, 165);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 618px) {
+  .left_header{
+    margin-left: 40px;
+  }
+  .middle_header{
+    display: none;
+  }
+  .right_header{
+    margin-right: 40px;
+  }
+  .cart_quantity{
+    right: 83px;
+  }
+}
