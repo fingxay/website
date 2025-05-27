@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/search.css">
   </head>
-
+    <script>
+      function update_alert() {
+        alert("Tính năng đang được phát triển.");
+      }
+  </script>
   <body>
     
     <div class="cosmetics_header">
@@ -45,7 +49,7 @@
             <i class="fa-solid fa-gear"></i>
             Những thiết lập riêng tư
           </div>
-          <div class="logout_button">
+          <div class="logout_button" onclick="location.href='login.html'">
             <i class="fa-solid fa-right-from-bracket"></i>
             Đăng xuất
           </div>
@@ -94,7 +98,7 @@
               <input type="radio" name="gender" value="female" id="female"> <label for="female">Nữ</label>
               <input type="radio" name="gender" value="other" id="other"> <label for="other">Khác</label>
             </div>
-            <button>Lưu thay đổi</button>
+            <button onclick="update_alert()">Lưu thay đổi</button>
           </div>
         </div>
 
@@ -149,7 +153,7 @@
 
               <div class="modal_actions">
                 <button class="modal_back_button js_modal_back_button">Trở Lại</button>
-                <button class="modal_complete_button js_modal_complete_button">Hoàn thành</button>
+                <button class="modal_complete_button js_modal_complete_button" onclick="update_alert()">Hoàn thành</button>
               </div>
           </div>
         </div>
@@ -180,7 +184,7 @@
 
               <div class="modal_actions">
                 <button class="modal_back_button js_modal_update_back_button">Trở Lại</button>
-                <button class="modal_update_button js_modal_update_button">Hoàn thành</button>
+                <button class="modal_update_button js_modal_update_button" onclick="update_alert()">Hoàn thành</button>
               </div>
           </div>
         </div>
@@ -189,7 +193,7 @@
 
         <div class="bottom_right_account_settings">
           <div>Yêu cầu xóa tài khoản</div>
-          <button>Xóa tài khoản</button>
+          <button onclick="update_alert()">Xóa tài khoản</button>
         </div>
       </div>
     </div>
